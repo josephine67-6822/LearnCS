@@ -16,6 +16,89 @@ namespace LearnCS
             // Addition
             // Subtractio
             //kfjalkmdfakma;f;
+
+            //Arrey
+            string[] cars = new string[3];
+            cars[0] = "Volvo";
+            cars[1] = "BMW";
+            cars[2] = "Ford";
+            Console.WriteLine($"First car: {cars[0]}");
+            Console.WriteLine($"Second car: {cars[1]}");
+            Console.WriteLine($"Third car: {cars[2]}");
+            //List (Dynamic Array)
+            List<int> numbers = new List<int>();
+            numbers.Add(64);
+            numbers.Add(34);
+            numbers.Add(25);
+            Console.WriteLine($"First number: {numbers[0]}");
+            Console.WriteLine($"Second number: {numbers[1]}");
+            Console.WriteLine($"Third number: {numbers[2]}");
+            numbers.Remove(34);
+            Console.WriteLine($"Second number: {numbers[1]}");
+            numbers.Add(100);
+            numbers[0] = numbers[1] + numbers[2];
+            Console.WriteLine($"First number: {numbers[0]}");
+            // Dictionaries
+            Dictionary<string, float> products = new Dictionary<string, float>();
+            products.Add("Apple", 0.99f);
+            products.Add("Banana", 0.59f);
+            products.Add("Orange", 0.79f);
+            Console.WriteLine($"Apple: ${products["Apple"]}");
+            Console.WriteLine($"Banana: ${products["Banana"]}");
+            Console.WriteLine($"Orange: ${products["Orange"]}");
+            if (a > b) Console.WriteLine("Alright, a is greater than b");
+            else Console.WriteLine("No, b is greater than a");
+
+            int age = 15;
+            if (age>= 15) Console.WriteLine("You are a teenajer");
+            else Console.WriteLine("You are a minor");
+
+            char grade = 'B';
+            switch (grade)
+            {
+                case 'A':
+                    Console.WriteLine("Excellent!");
+                    break;
+                case 'B':
+                case 'C':
+                    Console.WriteLine("Well done");
+                    break;
+                case 'D':
+                    Console.WriteLine("You passed");
+                    break;
+                case 'F':
+                    Console.WriteLine("Better try again");
+                    break;
+                default:
+                    Console.WriteLine("Invalid grade");
+                    break;
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"Iteration {i}");
+            }
+
+            bool isTrue = true;
+            int counter = 0;
+            while (isTrue) // isTrue == true)
+            {
+                Console.WriteLine("Eternity");
+                if (counter == 10)
+                {
+                    isTrue = false;
+                }
+                counter++;
+             
+            }
+            foreach (string car in cars)
+            {
+                Console.WriteLine($"Car: {car}");
         }
+        }
+
     }
 }
+
+
+
