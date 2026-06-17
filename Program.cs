@@ -93,8 +93,8 @@ namespace LearnCS
             }
             foreach (string car in cars)
             {
-                Console.WriteLine($"Car: {car}");
-        }
+                Console.WriteLine($"Car: {car}"); // Iterates through each element in the cars array
+            }
         }
 
     }
