@@ -11,7 +11,7 @@ namespace LearnCS
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            int a =5; int b =2;
+            int a = 5; int b = 2;
             Console.WriteLine($"a + b = {a + b}");
             // Addition
             // Subtractio
@@ -50,7 +50,7 @@ namespace LearnCS
             else Console.WriteLine("No, b is greater than a");
 
             int age = 15;
-            if (age>= 15) Console.WriteLine("You are a teenajer");
+            if (age >= 15) Console.WriteLine("You are a teenajer");
             else Console.WriteLine("You are a minor");
 
             char grade = 'B';
@@ -89,16 +89,80 @@ namespace LearnCS
                     isTrue = false;
                 }
                 counter++;
-             
+
             }
             foreach (string car in cars)
             {
                 Console.WriteLine($"Car: {car}"); // Iterates through each element in the cars array
             }
-        }
 
+
+            for (int i = 0; i < cars.Length; i++)
+            {
+                Console.WriteLine($"Car: {cars[i]}"); // Iterates through each element in the cars array using index)
+            }
+
+            //Functions
+            string Hello(string name = "Noname")
+            {
+                return $"Hello, (name)!";
+            }
+
+            /* string h = Hello();
+            Console.WriteLine(h); */
+
+            Console.WriteLine(Hello("John"));
+            Console.WriteLine(Hello());
+
+            void NumberCompare(int x, int y)
+            {
+                if (x > y) Console.WriteLine($"{x} is greater than {y}");
+                else if (x < y) Console.WriteLine($"{x} is less than {y}");
+                else Console.WriteLine($"{x} is equal to {y}");
+            }
+
+            NumberCompare(5, 10);
+
+            List<Player> players = new List<Player>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                players.Add(new Player());
+            }
+            /*players.Add(new Player("Alice", 5));
+            players.Add(new Player("Bob", 10));
+            players.Add(new Player("Charlie", 15));
+
+            /*players[0].Name = "John";
+            players[1].Name = "Alice";
+            players[2].Name = "Bob";
+            players[0].Level = 1;
+            players[1].Level = 2;
+            players[2].Level = 3; */
+
+
+
+            foreach (Player player in players)
+            {
+                Console.WriteLine($"Player: {player.Name}, Level: {player.Level}");
+
+            }
+
+
+        }
+        class Player
+        {
+            public string Name;
+            public int Health;
+            public int Level;
+            public void Introduce()
+            {
+                Console.WriteLine($"Hi, my name is {Name}, I have {Health} health and I am level {Level}.");
+            }
+        }
     }
 }
+
 
 
 
